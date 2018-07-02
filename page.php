@@ -25,9 +25,16 @@ $context = Timber::get_context();
 $post = new TimberPost();
 $context['post'] = $post;
 
-Timber::render(array(
+$templates = array(
     'Templates/page-' . $post->post_name . '.twig',
     'Templates/page.twig',
     'Templates/singular.twig',
-    'Templates/index.twig')
-, $context );
+    'Templates/index.twig');
+
+if ( is_home() || is_front_page()) {
+    $context['posts'] = Timber::get_posts('post_type = post');
+
+    array_unshift( $templates, 'Templates/front-page.twig', 'Templates/home.twig' );
+}
+
+Timber::render($templates, $context );

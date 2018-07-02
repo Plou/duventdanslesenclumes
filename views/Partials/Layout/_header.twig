@@ -1,6 +1,10 @@
-<header id="header" class="header" >
-  <h1 class="logo" role="banner">
-    <a class="logo-link" href="/" rel="home">{{site.name}}</a>
-  </h1>
-  {% include 'Partials/Components/_nav-main.twig' %}
+<header id="header" class="header" style="background-image: url({{ post.thumbnail.src }})">
+  {% if not is_home %}
+    {% include 'Partials/Components/_nav-main.twig' %}
+  {% endif %}
+
+  <div class="header--content">
+    <h1 class="header--title">{{post.title}}</h1>
+    <p class="header--subtitle">{{post.get_field('subtitle')}}</p>
+  </div>
 </header>

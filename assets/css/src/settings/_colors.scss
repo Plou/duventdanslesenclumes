@@ -8,9 +8,10 @@
 /// Grey scale
 $white: #fff;
 
-$grey: #cecece;
+$grey: #9b9b9b;
+$grey-light: #ccc;
 
-$black: #303044;
+$black: #1a1a1a;
 
 // Transparent grey scale
 $black-50: rgba($black, .5);
@@ -20,13 +21,15 @@ $red: #d9534f;
 $green: #5cb85c;
 
 /// Branding colors
-$blue: #68bbdb;
+$blue: #679fae;
+$yellow: #e2b62d;
 
 $color-main: $blue;
-$color-secondary: $blue;
+$color-secondary: $yellow;
 
 /// Functionnal colors
 $color-text: $black;
 $color-link: $color-main;
+$color-highlight: $color-secondary;
 $color-error: $red;
 $color-valid: $green;

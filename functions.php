@@ -79,7 +79,7 @@ class StarterSite extends TimberSite {
     }
 
     function add_image_size(){
-        add_image_size('post_home_thumbnail', 400, 300, true );
+        // add_image_size('post_home_thumbnail', 400, 300, true );
     }
 
     function config_tiny_mce( $settings ){
@@ -111,6 +111,10 @@ class StarterSite extends TimberSite {
             $context['breadcrumb'] = yoast_breadcrumb('<p>','</p>', false );
         }
 
+        $context['is_home'] = false;
+        if ( is_home() || is_front_page()) {
+            $context['is_home'] = true;
+        }
         // This 'site' context below allows you to access main site information like the site title or description.
         $context['site'] = $this;
         return $context;

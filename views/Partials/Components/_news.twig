@@ -1,0 +1,18 @@
+<div class="news {{isMain ? 'news__main'}}">
+  <a href="{{news.link}}" class="news--link link-block">
+    {% if news.thumbnail.src %}
+      <div class="news--thumbnail">
+        <img class="news--image" src="{{news.thumbnail | resize(360, 225)}}" alt="" width="360" height="225"  />
+      </div>
+    {% endif %}
+    <div class="news--content">
+      <p class="news--date">
+        {{ news.date | date("j M Y") }}
+      </p>
+      <h3 class="news--title">{{news.title}}</h2>
+      <p class="news--text">
+        {{news.preview.read_more("")}}
+      </p>
+    </div>
+  </a>
+</div>
