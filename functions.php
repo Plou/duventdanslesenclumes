@@ -7,11 +7,10 @@ if (!file_exists(__DIR__ . '/vendor/autoload.php')) {
     return;
 }
 else {
+    // Load Timber from composer
     require_once(__DIR__ . '/vendor/autoload.php');
     $timber = new \Timber\Timber();
 }
-
-// Load Timber from composer
 
 
 // Create our version of the TimberSite object
@@ -33,11 +32,11 @@ class StarterSite extends TimberSite {
             add_editor_style( './lib/custom-editor-style.css' );
         });
 
-        add_action('tiny_mce_before_init', array($this, 'config_tiny_mce'));
+        add_action('tiny_mce_before_init', array($this, 'config_tiny_mce'), 100);
         add_filter( 'mce_buttons', function($buttons) {
             array_unshift( $buttons, 'styleselect' );
             return $buttons;
-        });
+        }, 100);
 
 
         add_action('init', array($this, 'register_post_types'));
@@ -84,7 +83,7 @@ class StarterSite extends TimberSite {
 
     function config_tiny_mce( $settings ){
         $style_formats = array(
-            array( 'title' => 'Bouton', 'selector' => 'a, button', 'classes' => 'button' ),
+            array( 'title' => 'Chapô', 'selector' => 'p', 'classes' => 'chapo' ),
         );
         $settings['style_formats'] = json_encode( $style_formats );
         $settings['remove_script_host'] = true;

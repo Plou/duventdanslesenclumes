@@ -1,6 +1,15 @@
-<header id="header" class="header" style="background-image: url({{ post.thumbnail.src }})">
+<header id="header" class="header" style="background-image: url({{ (post.thumbnail.src ?: Image(16)) }})">
   {% if not is_home %}
-    {% include 'Partials/Components/_nav-main.twig' %}
+  <div class="header--top-bar">
+    <div class="header--logo">
+      <a class="header--link link-block" href="/">
+        <img class="header--image" src="{{theme.link}}/assets/img/logo.png" alt="3ème virage à gauche">
+      </a>
+    </div>
+    <div class="header--nav">
+      {% include 'Partials/Components/_nav.twig' with {'name': 'main', 'menu': menu.main} %}
+    </div>
+  </div>
   {% endif %}
 
   <div class="header--content">

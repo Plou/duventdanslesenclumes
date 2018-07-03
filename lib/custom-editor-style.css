@@ -11,5 +11,6 @@ h4 strong,
 h5 strong,
 h6 strong { font-weight: 700; }
 
-a.button,
-button.button {  }
+.chapo {
+  font-size: 20px;
+}
