@@ -2,16 +2,11 @@
 .db_thumb
 ._*
 
-node_modules
-js_composer.zip
-vendor/
+/*
+!wp-content
 
-*_local.*
-.sass-cache
-npm-debug.log
-
-assets/css/*.css*
-assets/js/*.js*
+wp-content/plugins/*
+!wp-content/plugins/elementor-widgets
 
 
 !.gitkeep
