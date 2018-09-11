@@ -1,35 +1,77 @@
 .header
-  margin-bottom: 100px
-  padding: 280px 30px 0
+  position: relative
+  margin-bottom: 50px
+  padding: 240px 30px 0
   background-size: cover
+  background-position: center top
+  z-index: 10
+
+  &.has-top-bar
+    padding-top: 540px
+
+  @media screen and #{$media-medium}
+    margin-bottom: 100px
+    padding-top: 300px
+    &.has-top-bar
+      margin-top: 60px
+      padding-top: 240px
 
 .header--top-bar
-  position: fixed
+  position: absolute
   top: 0
   right: 0
   left: 0
-  display: flex
-  justify-content: space-between
-  align-items: center
-  padding: 5px 20px
   background: $white
   box-shadow: 0 0 10px 0 rgba($black, .2)
+  @media screen and #{$media-medium}
+    position: fixed
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+
+.header--logo
+  position: relative
+  width: 100%
+  max-width: 100%
+  @media screen and #{$media-medium}
+    width: 230px
+  @media screen and #{$media-large}
+    width: 384px
+
+.header--image
+  width: 100%
+  @media screen and #{$media-medium}
+    position: absolute
+    left: 20px
+    top: 0
+    border: 10px solid white;
+    border-top: 0;
+    border-radius: 2px
+    box-shadow: 0 0 10px 0 rgba(26,26,26,.2)
 
 .header--nav
+  padding: 5px 20px
+  text-align: center
+  @media screen and #{$media-medium}
+    text-align: right
 
 .header--content
   margin: auto
-  padding: 40px
+  padding: 20px
   width: 780px
   max-width: 100%
   background-color: $white
   text-align: center
+  @media screen and #{$media-medium}
+    padding: 40px
 
 .header--title
   margin: 0 0 7px 0
   font-family: 'Montserrat'
-  font-size: 5.2em
+  font-size: 4em
   font-weight: $fw-semibold
+  @media screen and #{$media-medium}
+    font-size: 5.2em
 
 .header--subtitle
   margin: 0

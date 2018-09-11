@@ -1,9 +1,12 @@
-<header id="header" class="header" style="background-image: url({{ (post.thumbnail.src ?: Image(16)) }})">
+<header id="header" class="header {{ (is_home ?: 'has-top-bar') }}" style="background-image: url({{ (post.thumbnail.src ?: Image(16)) }})">
   {% if not is_home %}
   <div class="header--top-bar">
     <div class="header--logo">
       <a class="header--link link-block" href="/">
-        <img class="header--image" src="{{theme.link}}/assets/img/logo.png" alt="3ème virage à gauche">
+        <img class="header--image"
+        src="{{theme.link}}/assets/img/logo.png"
+        srcset="{{theme.link}}/assets/img/logo@2x.png 2x"
+        alt="3ème virage à gauche">
       </a>
     </div>
     <div class="header--nav">
