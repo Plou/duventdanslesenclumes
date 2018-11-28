@@ -17,7 +17,9 @@
 
     {% block footer %}
       {% include 'Partials/Layout/_footer.twig' %}
-
+      <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:200i,400,500|Work+Sans:400,500');
+      </style>
       {{ function('wp_footer') }}
       {% include 'Partials/Components/_analytics.twig' %}
     {% endblock %}
