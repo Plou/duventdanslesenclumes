@@ -1,5 +1,4 @@
-<header id="header" class="header {{ (is_home ?: 'has-top-bar') }}" style="background-image: url({{ (post.thumbnail.src ?: Image(16)) }})">
-  {% if not is_home %}
+<header id="header" class="header has-top-bar" style="background-image: url({{ (post.thumbnail.src ?: Image(80)) }})">
   <div class="header--top-bar">
     <div class="header--logo">
       <a class="header--link link-block" href="/">
@@ -13,7 +12,6 @@
       {% include 'Partials/Components/_nav.twig' with {'name': 'main', 'menu': menu.main} %}
     </div>
   </div>
-  {% endif %}
 
   <div class="header--content">
     <h1 class="header--title">{{post.title}}</h1>

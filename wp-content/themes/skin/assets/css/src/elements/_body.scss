@@ -6,4 +6,11 @@
 ////
 
 /// Text default font and color
-body { font-family: $font; font-weight: $fw-regular; color: $color-text; }
+body {
+  font-family: $font;
+  font-weight: $fw-regular;
+  color: $color-text;
+  background-image: url('/wp-content/themes/skin/assets/img/background.png');
+  background-size: 100% auto;
+  background-repeat: repeat-y;
+}

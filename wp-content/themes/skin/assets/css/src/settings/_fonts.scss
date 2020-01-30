@@ -7,14 +7,13 @@
 
 
 /// Font fomily
-$ff-work: 'Work Sans', Arial, sans-serif;
-$ff-montserrat: 'Montserrat', Arial, sans-serif;
 
-$font: $ff-work;
-$font-headings: $ff-montserrat;
+$font: 'Work Sans', Arial, sans-serif;
+$font-headings: 'Alice', Arial, sans-serif;
 
 /// Fonts weight
 /// They must reflect avalaible weights
-$fw-light: 200;
+$fw-light: 300;
 $fw-regular: 400;
-$fw-semibold: 500;
+$fw-semibold: 600;
+$fw-bold: 600;

@@ -1,10 +1,35 @@
 .nav__main
   font-family: $font-headings
   .nav--item
+    position: relative
+    margin: 0
+    padding: 10px
     font-size: 1.8rem
-    margin: 10px
   .nav--link
-    color: $black
+    color: $white
     font-weight: $fw-semibold
     &:hover
       color: $color-main
+
+
+.nav--drop
+  display: none
+  position: absolute
+  top: 100%
+  right: 0
+  padding: 0
+  min-width: 100%
+  background-color: $black
+
+  .nav--item:hover &
+    display: block
+
+.nav--drop
+  .nav--item
+    margin: 0
+    padding: 10px
+    width: 100%
+    border-bottom: 1px solid $white
+
+    &:last-child
+      border-bottom-color: transparent 
