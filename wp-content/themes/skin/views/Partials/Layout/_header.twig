@@ -1,20 +1,20 @@
-<header id="header" class="header has-top-bar" style="background-image: url({{ (post.thumbnail.src ?: Image(80)) }})">
-  <div class="header--top-bar">
-    <div class="header--logo">
-      <a class="header--link link-block" href="/">
-        <img class="header--image"
+<header id="header" class="header has-top-bar {{post.thumbnail.src ? 'header--billboard'}}" style="{{post.thumbnail.src ? "background-image: url(#{post.thumbnail.src})"}}">
+  <div class="header__top-bar">
+    <div class="header__logo">
+      <a class="header__link link-block" href="/">
+        <img class="header__image"
         src="{{theme.link}}/assets/img/logo.png"
         srcset="{{theme.link}}/assets/img/logo@2x.png 2x"
         alt="3ème virage à gauche">
       </a>
     </div>
-    <div class="header--nav">
+    <div class="header__nav">
       {% include 'Partials/Components/_nav.twig' with {'name': 'main', 'menu': menu.main} %}
     </div>
   </div>
 
-  <div class="header--content">
-    <h1 class="header--title">{{post.title}}</h1>
-    <p class="header--subtitle">{{post.get_field('subtitle')}}</p>
+  <div class="header__content">
+    <h1 class="header__title">{{post.title}}</h1>
+    <p class="header__subtitle">{{post.get_field('subtitle')}}</p>
   </div>
 </header>

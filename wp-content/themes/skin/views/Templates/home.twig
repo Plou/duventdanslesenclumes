@@ -2,13 +2,7 @@
 {% extends 'Layouts/base.twig' %}
 
 {% block content %}
-  {{post.content}}
-{# 
-  <h2 class="news-list-title">Notre Actu</h2>
-  <div class="news-list">
-    {% for news in posts %}
-      {% include ['Partials/Components/_news.twig'] with { 'isMain' : loop.first}%}
-    {% endfor %}
-  </div>
-  {% include 'Partials/Components/_pagination.twig' %} #}
+  <article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+    {{post.content}}
+  </article>
 {% endblock %}

@@ -1,5 +1,6 @@
 .nav__main
   font-family: $font-headings
+
   .nav--item
     position: relative
     margin: 0
@@ -9,27 +10,35 @@
     color: $white
     font-weight: $fw-semibold
     &:hover
-      color: $color-main
+      color: $color-link
 
 
-.nav--drop
-  display: none
-  position: absolute
-  top: 100%
-  right: 0
-  padding: 0
-  min-width: 100%
-  background-color: $black
-
-  .nav--item:hover &
-    display: block
-
-.nav--drop
-  .nav--item
+  .nav--list
     margin: 0
-    padding: 10px
-    width: 100%
-    border-bottom: 1px solid $white
+    padding: 0
+    list-style: none;
 
-    &:last-child
-      border-bottom-color: transparent 
+  .nav--drop
+    display: none
+    position: absolute
+    top: 100%
+    right: 0
+    margin: 0
+    padding: 0
+    list-style: none;
+    min-width: 100%
+    background-color: $black
+    text-align: left
+
+    .nav--item:hover &
+      display: block
+
+  .nav--drop
+    .nav--item
+      margin: 0
+      padding: 10px
+      width: 100%
+      border-bottom: 1px solid $white
+
+      &:last-child
+        border-bottom-color: transparent 
