@@ -5,7 +5,6 @@
 
 // experimental! 
 
-// .attachment-full {
-//   mix-blend-mode: darken; //break backdrop filter on top-bar 
-//   will-change: opacity;
-// }
+.mix-blend-darken {
+  mix-blend-mode: darken; //break backdrop filter on top-bar 
+}
