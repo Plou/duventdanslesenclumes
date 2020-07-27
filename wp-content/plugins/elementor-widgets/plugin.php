@@ -2,6 +2,7 @@
 namespace Skin;
 
 use Skin\Widgets\HoneyPot;
+use Skin\Widgets\Calendar;
 use Skin\Widgets\Inline_Editing;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -58,6 +59,7 @@ class Plugin {
 	 */
 	private function includes() {
 		require __DIR__ . '/widgets/honey-pot.php';
+		require __DIR__ . '/widgets/calendar.php';
 	}
 
 	/**
@@ -69,6 +71,7 @@ class Plugin {
 	 */
 	private function register_widget() {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new HoneyPot() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Calendar() );
 	}
 }
 

@@ -152,7 +152,7 @@ function my_scripts() {
 
     // Enqueue our stylesheet and JS file with a jQuery dependency.
     // Note that we aren't using WordPress' default style.css, and instead enqueueing the file of compiled Sass.
-    wp_enqueue_style('my-styles', get_template_directory_uri() . '/assets/css/main.css', array(), '1.1.0');
+    wp_enqueue_style('my-styles', get_template_directory_uri() . '/assets/css/main.css', array(), '1.2.4');
     wp_enqueue_script('my-js', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), '1.0.0', true );
 }
 
